@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="main.js" defer></script>
+    <title>Coordinates</title>
+    <style>
+      body {
+        margin: 0;
+        background-color: rgb(31, 23, 23);
+      }
+      div {
+        margin: 10px;
+        width: 200px;
+        height: 200px;
+        border-radius: 4px;
+        background-color: bisque;
+      }
+      .special_page {
+        background-color: brown;
+      }
+    </style>
+  </head>
+  <body>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div class="special_page"></div>
+    <div></div>
+    <div></div>
+    <div></div>
+
+    <script>
+      const specialPage = document.querySelector('.special_page');
+
+      specialPage.addEventListener('click', event => {
+        console.log(specialPage.getBoundingClientRect());
+        console.log(`client : ${event.clientX} ${event.clientY}`);
+        console.log(`page : ${event.pageX} ${event.pageY}`);
+      });
+    </script>
+  </body>
+</html>

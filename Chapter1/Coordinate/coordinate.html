@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
     <script src="main.js" defer></script>
     <title>Coordinates</title>
     <style>
@@ -21,10 +20,20 @@
       .special_page {
         background-color: brown;
       }
+      .buttons {
+        margin: 5px;
+        position: fixed;
+        top: 10px;
+        right: 10px;
+      }
     </style>
   </head>
   <body>
-    <div></div>
+    <nav class="buttons">
+      <button class="scroll_by">Scroll by 100px(y)</button>
+      <button class="scroll_to">Scroll to 100px(y)</button>
+      <button class="scroll_into">Scroll into special</button>
+    </nav>
     <div></div>
     <div></div>
     <div></div>
@@ -34,15 +43,6 @@
     <div></div>
     <div></div>
     <div></div>
-
-    <script>
-      const specialPage = document.querySelector('.special_page');
-
-      specialPage.addEventListener('click', event => {
-        console.log(specialPage.getBoundingClientRect());
-        console.log(`client : ${event.clientX} ${event.clientY}`);
-        console.log(`page : ${event.pageX} ${event.pageY}`);
-      });
-    </script>
+    <div></div>
   </body>
 </html>

@@ -1,0 +1,53 @@
+:root {
+  /* color */
+  --black-color: black;
+  --white-color: rgb(216, 209, 209);
+
+  /* size */
+  --img-size: 50px;
+  --font-size: 15px;
+}
+
+body {
+  margin: 0;
+  background-color: var(--black-color);
+  overflow: hidden;
+}
+
+.target {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 150px;
+  height: 70px;
+  transform: translate(-25px, -25px);
+}
+
+.target_img {
+  width: var(--img-size);
+  height: var(--img-size);
+}
+
+.show_coor {
+  position: absolute;
+  left: 40px;
+  top: 30px;
+  font-size: var(--font-size);
+  color: var(--white-color);
+}
+.line {
+  position: absolute;
+  background-color: var(--white-color);
+}
+
+.line.horizontal {
+  top: 50%;
+  width: 100%;
+  height: 1px;
+}
+
+.line.vertical {
+  left: 50%;
+  height: 100%;
+  width: 1px;
+}
